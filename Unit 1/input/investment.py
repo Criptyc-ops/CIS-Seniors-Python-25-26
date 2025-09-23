@@ -39,5 +39,10 @@ print("=" * 60)
 print("Year Starting Balance Interest Earned Ending Balance")
 print("-" * 60)
 
-#computer and display the results for each year
-
+#compute and display the results for each year
+for year in range(1, num_Years + 1):
+    interest_Earned = startingInvestment * rate
+    ending_Balance = startingInvestment + interest_Earned
+    accumulated_Interest += interest_Earned
+    print(f"{year:4d} {startingInvestment:16.2f} {interest_Earned:15.2f} {ending_Balance:16.2f}")
+    startingInvestment = ending_Balance
