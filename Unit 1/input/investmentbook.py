@@ -18,7 +18,7 @@ Years = int(input("Enter the number of years to invest: "))
 rate = rate / 100
 
 #initialize the accumulator for the interest
-
+totalInterest = 0.0
 #display the header for the table
 print("\n\nInvestment Report")
 print("=" * 60)
