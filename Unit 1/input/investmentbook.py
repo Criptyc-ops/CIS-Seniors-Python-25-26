@@ -22,7 +22,17 @@ totalInterest = 0.0
 #display the header for the table
 print("\n\nInvestment Report")
 print("=" * 60)
-print("Year Starting Balance Interest Earned Ending Balance")
+print("%4s%18s%10s%16s" % ("Year", "Starting Balance", " Interest Earned", "Ending Balance"))
 print("-" * 60)
 
-#display the totals for the 
+#display the totals for each year
+for year in range(1, Years + 1):
+    interest = startingBalance * rate
+    endBalance = startingBalance + interest
+    totalInterest += interest
+    print("%4d%18.2f%10.2f%16.2f" % (year, startingBalance, interest, endBalance))
+    startingBalance = endBalance
+
+#display the totals for the period
+print("Ending balance: $%0.2f" % endBalance)
+print("Total interest earned: $%0.2f" % totalInterest)
