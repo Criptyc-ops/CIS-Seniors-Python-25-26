@@ -4,7 +4,11 @@ author: Jonathan Robinson
 date: 2025-09-25
 course: CIS 25-26
 '''
+print("\n")
+print('*' * 20)
 print("Quiz Scorer")
+print('*' * 20)
+print("\n")
 #inputs
 name = input("what is your students name? ")
 test = input("how many questions were on the quiz? ")
